@@ -26,7 +26,7 @@ SECRET_KEY = '#lm20skb5bwkz!!gqox7wx8#()biq0^a6k9%+79)+o52a_tsen'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-'afternoon-earth-08431.herokuapp.com',
+'whispering-fortress-33048.herokuapp.com',
     '127.0.0.1'
 ]
 
