@@ -1,0 +1,86 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head dir="rtl" lang="en">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://unpkg.com/@coreui/coreui@3.0.0-rc.0/dist/css/coreui.min.css">
+
+    <title>Hello, world!</title>
+
+    <!-- added from coreui index abed -->
+    <!-- Main styles for this application-->
+    <link href="{% static 'coreui/css/style.css' %}" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics-->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        // Shared ID
+        gtag('config', 'UA-118965717-3');
+        // Bootstrap ID
+        gtag('config', 'UA-118965717-5');
+    </script>
+    <link href="{% static 'coreui/vendors/@coreui/chartjs/css/coreui-chartjs.css' %}" rel="stylesheet">
+
+</head>
+<body class="c-app">
+
+<!--
+Include the nav bar
+-->
+<div class="c-wrapper c-fixed-components">
+    <div class="c-body" style="padding-top: 0px">
+        <main class="c-main">
+            {% block content %}
+            {% endblock %}
+        </main>
+    </div>
+</div>
+<!--
+Load all JS files
+-->
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+<!-- CoreUI JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"
+        integrity="sha384-L2pyEeut/H3mtgCBaUNw7KWzp5n9&#43;4pDQiExs933/5QfaTh8YStYFFkOzSoXjlTb"
+        crossorigin="anonymous"></script>
+
+<!-- added from coreui index abed -->
+<!-- CoreUI and necessary plugins-->
+<script src="{% static 'coreui/vendors/@coreui/coreui/js/coreui.bundle.min.js' %}"></script>
+<!--[if IE]><!-->
+<script src="{% static 'coreui/vendors/@coreui/icons/js/svgxuse.min.js' %}"></script>
+<!--<![endif]-->
+<!-- Plugins and scripts required by this view-->
+<script src="{% static 'coreui/vendors/@coreui/chartjs/js/coreui-chartjs.bundle.js' %}"></script>
+<script src="{% static 'coreui/vendors/@coreui/utils/js/coreui-utils.js' %}"></script>
+<script src="{% static 'coreui/js/main.js' %}"></script>
+
+<!-- Load my scripts -->
+{% block scripts %}
+{% endblock %}
+
+</body>
+</html>
